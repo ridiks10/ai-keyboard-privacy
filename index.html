@@ -3,94 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - AI Keyboard APP</title>
+  <title>AI Keyboard – Privacy & Usage Policy</title>
   <style>
+    :root {
+      color-scheme: light dark;
+      --brand: #4a90e2;
+      --text: #1f2933;
+      --muted: #4b5563;
+      --surface: #ffffff;
+      --background: #f2f5f9;
+      --border: rgba(37, 99, 235, 0.1);
+    }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: "SF Pro Display", "SF Pro Text", "Inter", Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--background);
+      color: var(--text);
     }
     header {
-      background: #4a90e2;
+      background: linear-gradient(135deg, var(--brand), #1b6fdc);
       color: white;
-      padding: 20px;
+      padding: 32px 16px;
       text-align: center;
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 0 16px 32px;
     }
-    h1 {
-      color: #ffffff;
+    section {
+      background: var(--surface);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
     }
-    h2 {
-      color: #4a90e2;
+    h1, h2 {
+      margin-top: 0;
+      color: var(--brand);
+    }
+    ul {
+      padding-left: 20px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
+      padding: 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --surface: #161b22;
+        --background: #0b0f16;
+        --border: rgba(74, 144, 226, 0.35);
+      }
+      section {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Privacy Policy</h1>
+    <p>AI Keyboard – mobile app & custom keyboard</p>
+    <h1>Privacy Policy & Data Sharing Rules</h1>
+    <p>Last updated: 20 March 2025</p>
   </header>
   <main>
-    <p><strong>AI Keyboard</strong> ("we", "our", or "us") respects your privacy.
-    This Privacy Policy explains how we collect, use, and protect your information when you use our application.</p>
+    <section>
+      <h2>1. Who we are</h2>
+      <p><strong>AI Keyboard</strong> (“we”, “us”, “our service”) respects user privacy and complies with Apple App Review Guideline 5.1.2(i), GDPR, and other applicable regulations.</p>
+      <p>Privacy contact: <a href="mailto:ridiks100@gmail.com">ridiks100@gmail.com</a>.</p>
+    </section>
 
-    <h2>Information We Collect</h2>
-    <ul>
-      <li>We do <strong>not</strong> collect or store personal information such as name, email, or contacts.</li>
-      <li>The app may collect anonymous usage data (e.g., crash reports, performance metrics) to improve the user experience.</li>
-    </ul>
+    <section>
+      <h2>2. What data we process</h2>
+      <ul>
+        <li><strong>User text for AI.</strong> Only after you give explicit consent do we send selected text to the third-party AI provider OpenRouter (https://openrouter.ai) to generate responses. We do not store these texts on our own servers.</li>
+        <li><strong>Keyboard preferences and prompts.</strong> Settings, saved prompts, or snippets are synced through App Group / iCloud solely across your devices.</li>
+        <li><strong>MiniTanks multiplayer data.</strong> For online matches we transmit the PIN, match events, tank coordinates, and system toasts to our WebSocket server at <code>wss://ws.aikeyboard.pp.ua</code>. We do not collect personal conversations, and we discourage sending private content via in-game messages.</li>
+        <li><strong>Performance analytics.</strong> Anonymous crash reports and diagnostics may be processed by Apple/Google services to improve stability.</li>
+      </ul>
+    </section>
 
-    <h2>Keyboard Data</h2>
-    <p>
-      Our keyboard extension does <strong>not</strong> record, transmit, or store any text you type.  
-      All text input and processing occur entirely on your device.  
-      If you enable “Full Access”, it is used only to support additional app functionality 
-      (such as syncing your preferences) and <strong>not</strong> to collect your typing data or personal information.
-    </p>
+    <section>
+      <h2>3. How we obtain your consent</h2>
+      <ul>
+        <li>During onboarding the app shows a clear explanation of how data is sent and links to this document. Checking the “I agree” box is required before AI features are enabled.</li>
+        <li>You can revoke consent at any time in settings (“Settings → Privacy → AI Processing”). After revocation we prevent any AI text transfer.</li>
+        <li>MiniTanks multiplayer asks for a separate consent before connecting to the WebSocket server.</li>
+      </ul>
+    </section>
 
-    <h2>Use of Information</h2>
-    <p>Collected data (if any) is used only for:</p>
-    <ul>
-      <li>Improving app performance</li>
-      <li>Fixing bugs</li>
-      <li>Enhancing user experience</li>
-    </ul>
+    <section>
+      <h2>4. Use and sharing of data</h2>
+      <p>We use the data strictly for:</p>
+      <ul>
+        <li>Generating AI responses via OpenRouter upon your request;</li>
+        <li>Syncing prompts/snippets between your devices;</li>
+        <li>Routing MiniTanks multiplayer sessions through our WebSocket server;</li>
+        <li>Analyzing crashes and fixing bugs.</li>
+      </ul>
+      <p>We do not sell personal data or share it with advertising networks. Third-party processors (OpenRouter, Apple, Google) only receive data required for their function and operate under their own privacy policies.</p>
+    </section>
 
-    <h2>Data Sharing</h2>
-    <p>
-      We do <strong>not</strong> sell, trade, or share your personal data with third parties.  
-      Analytics or crash data may be processed by trusted service providers (e.g., Apple, Google) under their privacy policies.
-    </p>
+    <section>
+      <h2>5. Your rights and control</h2>
+      <ul>
+        <li>Revoke AI or multiplayer consent in the app/system settings whenever you wish.</li>
+        <li>Delete stored prompts, PIN history, or other local items manually.</li>
+        <li>Contact <a href="mailto:ridiks100@gmail.com">ridiks100@gmail.com</a> to request a data copy, correction, or deletion (subject to applicable laws).</li>
+      </ul>
+    </section>
 
-    <h2>Security</h2>
-    <p>We take reasonable measures to protect your data. However, no method of transmission or storage is 100% secure.</p>
+    <section>
+      <h2>6. Security</h2>
+      <p>We rely on TLS/WSS encryption, App Group sandboxing, and strict API access controls. No method is 100% foolproof, so please avoid entering passwords, payment data, or sensitive secrets into AI prompts.</p>
+    </section>
 
-    <h2>Children’s Privacy</h2>
-    <p>Our app does not knowingly collect data from children under 13 years of age.</p>
+    <section>
+      <h2>7. Children</h2>
+      <p>The app is not intended for children under 13, and we do not knowingly collect data from minors.</p>
+    </section>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
-
-    <h2>Contact Us</h2>
-    <p>If you have questions about this Privacy Policy, please contact us at:</p>
-    <p><strong>Email:</strong> ridiks100@gmail.com</p>
-
-    <p><em>Last updated: October 2025</em></p>
+    <section>
+      <h2>8. Policy updates</h2>
+      <p>We periodically audit third-party services and update this policy whenever data-sharing practices change. New versions take effect once published.</p>
+    </section>
   </main>
   <footer>
     &copy; 2025 AI Keyboard. All rights reserved.
